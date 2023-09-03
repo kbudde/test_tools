@@ -3,5 +3,6 @@ package main
 import "github.com/fatih/color"
 
 func main() {
-	color.Blue("Hello, World!")
+	color.Blue("Hello,")
+	color.Red("World!")
 }
