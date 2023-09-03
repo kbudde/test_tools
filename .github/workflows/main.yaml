@@ -23,12 +23,19 @@ jobs:
         git-user-email: 'bot@kris.budd.ee'
     - name: Print version
       run: "echo '${{ steps.release.outputs.version }}'"
+    
+    - name: Create Tag
+      run: |
+        git tag -a ${{ steps.release.outputs.version }} -m 'Version ${{ steps.release.outputs.version }}'
+        git push origin ${{ steps.release.outputs.version }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # - name: Generate Changelog
     #   run: cog changelog --at ${{ steps.release.outputs.version }} -t full_hash > GITHUB_CHANGELOG.md
 
     # - name: Upload github release
-    #   uses: softprops/action-gh-release@v1
+      # uses: softprops/action-gh-release@v1
     #   with:
     #     body_path: GITHUB_CHANGELOG.md
     #     tag_name: ${{ steps.release.outputs.version }}
