@@ -1,0 +1,61 @@
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+# vim: set ts=2 sw=2 tw=0 fo=cnqoj
+project_name: test
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    tags: 
+      - netgo
+      - static_build
+    targets:
+      - windows_amd64
+      - linux_arm64
+      - linux_amd64
+      - darwin_arm64
+      - darwin_amd64
+      - linux_arm_6
+      - linux_arm_7
+    ldflags: 
+      -  -X main.Version={{.Version}}
+      -  -X main.Revision={{.ShortCommit}}
+      -  -X main.BuildDate={{.CommitDate}}
+
+archives:
+  - format: tar.gz
+    name_template: >-
+      {{ .ProjectName }}_
+      {{- title .Os }}_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ end }}
+      {{- if .Arm }}v{{ .Arm }}{{ end }}
+    format_overrides:
+    - goos: windows
+      format: zip
+
+checksum:
+  name_template: 'checksums.txt'
+
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  sort: asc
+  use: github
+  groups:
+  - title: Features
+    regexp: '^.*?feat(\([[:word:]]+\))??!?:.+$'
+    order: 0
+  - title: "Fixes"
+    regexp: '^.*?fix(\([[:word:]]+\))??!?:.+$'
+    order: 1
+  - title: Dependencies
+    regexp: '^.*?chore(packages)??!?:.+$'
+    order: 998
+  - title: Others
+    order: 999
+
