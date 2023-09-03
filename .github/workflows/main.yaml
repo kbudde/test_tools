@@ -21,12 +21,12 @@ jobs:
         release: true
         git-user: 'Cog Bot'
         git-user-email: 'bot@kris.budd.ee'
+    
     - name: Print version
       run: "echo '${{ steps.release.outputs.version }}'"
     
-    - name: Create Tag
+    - name: Push Tag
       run: |
-        git tag -a ${{ steps.release.outputs.version }} -m 'Version ${{ steps.release.outputs.version }}'
         git push origin ${{ steps.release.outputs.version }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
