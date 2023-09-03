@@ -4,5 +4,5 @@ import "github.com/fatih/color"
 
 func main() {
 	color.Blue("Hello,")
-	color.Red("World!")
+	color.Red("YOU!")
 }
