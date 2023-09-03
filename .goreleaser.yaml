@@ -54,7 +54,7 @@ changelog:
     regexp: '^.*?fix(\([[:word:]]+\))??!?:.+$'
     order: 1
   - title: Dependencies
-    regexp: '^.*?chore(packages)??!?:.+$'
+    regexp: '^.*?chore(deps)??!?:.+$'
     order: 998
   - title: Others
     order: 999
