@@ -1,11 +1,12 @@
 repo_name: kbudde/test_tools
 report_id: 97b2de0789dcf5f787f47d854d18d982
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-09T17:12:59+00:00'
-requested_by: renovate[bot]
+timestamp: '2024-01-04T15:06:43+00:00'
+requested_by: stack-file[bot]
 provider: github
 branch: main
-detected_tools_count: 3
+detected_tools_count: 7
 tools:
 - name: Golang
   description: An open source programming language that makes it easy to build simple,
@@ -17,6 +18,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1005/O6AczwfV_400x400.png
+  detection_source_url: https://github.com/kbudde/test_tools
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -26,6 +28,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/kbudde/test_tools
   detection_source: Repo Metadata
 - name: GitHub Actions
   description: Automate your workflow from idea to production
@@ -35,6 +38,63 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/kbudde/test_tools/blob/main/.github/workflows/main.yaml
   detection_source: ".github/workflows/main.yaml"
   last_updated_by: renovate[bot]
   last_updated_on: 2023-09-06 04:18:00.000000000 Z
+- name: color
+  description: Color package for Go
+  package_url: https://pkg.go.dev/github.com/fatih/color
+  version: 1.14.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/kbudde/test_tools/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: renovate[bot]
+  last_updated_on: 2023-09-03 06:38:39.000000000 Z
+- name: go-colorable
+  description: Go-colorable Colorable writer for windows
+  package_url: https://pkg.go.dev/github.com/mattn/go-colorable
+  version: 0.1.13
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/kbudde/test_tools/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: renovate[bot]
+  last_updated_on: 2023-09-03 06:38:39.000000000 Z
+- name: go-isatty
+  description: Package isatty implements interface to isatty
+  package_url: https://pkg.go.dev/github.com/mattn/go-isatty
+  version: 0.0.16
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/kbudde/test_tools/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Kris Budde
+  last_updated_on: 2023-09-03 06:26:53.000000000 Z
+- name: sys
+  description: Go packages for low-level interaction with the operating system
+  package_url: https://pkg.go.dev/golang.org/x/sys
+  version: 0.0.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/kbudde/test_tools/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Kris Budde
+  last_updated_on: 2023-09-03 06:18:11.000000000 Z
