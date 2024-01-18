@@ -7,7 +7,7 @@
     ":semanticCommits",
     ":semanticCommitTypeAll(chore)",
     ":semanticCommitScope(deps)"
-  ]
+  ],
   schedule: ["before 8am every weekday", "every weekend"],
   // Rebase PRs if needed even if there are commits from other bots
   gitIgnoredAuthors: [
