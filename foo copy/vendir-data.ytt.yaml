@@ -1,0 +1,7 @@
+#@data/values
+---
+#@overlay/match-child-defaults missing_ok=True
+application:
+  #! renovate: datasource=git-tags
+  url: https://github.com/argoproj/argo-cd
+  version: v2.6.6
