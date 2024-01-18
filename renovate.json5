@@ -43,10 +43,10 @@
         ],
         "matchStringsStrategy":"recursive",
         "matchStrings":[
-          "name:\s*["]?(?<depName>[^'"\s]+)["]?",
-          "source:\s*["]?(?<datasource>[^'"\s]+)["]?",
-          "url:\s*["]?(?<registryUrl>[^'"\s]+)["]?",
-          "version:\s*["]?(?<currentValue>[^'"\s]+)["]?",
+          "name:\\s*[\"]?(?<depName>[^'\"\\s]+)[\"]?",
+          "source:\\s*[\"]?(?<datasource>[^'\"\\s]+)[\"]?",
+          "url:\\s*[\"]?(?<registryUrl>[^'\"\\s]+)[\"]?",
+          "version:\\s*[\"]?(?<currentValue>[^'\"\\s]+)[\"]?",
         ],
         "datasourceTemplate":"docker"
     },
