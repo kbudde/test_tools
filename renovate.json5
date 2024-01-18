@@ -45,7 +45,7 @@
       ],
        "matchStringsStrategy":"recursive",
       matchStrings: [
-        '-\s+name:',
+        '-\\s+name:',
         'name:\\s*["]?(?<depName>[^\'"\\s]+)["]?\\s+.*\\s+source:\\s*["]?(?<datasource>[^\'"\\s]+)["]?\\s+url:\\s*["]?(?<registryUrl>[^\'"\\s]+)["]?\\s+version:\\s*["]?(?<currentValue>[^\'"\\s]+)["]?',
       ],
     },
