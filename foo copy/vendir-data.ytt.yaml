@@ -4,4 +4,4 @@
 application:
   #! renovate: datasource=git-tags
   url: https://github.com/argoproj/argo-cd
-  version: v2.6.6
+  version: v2.9.4
