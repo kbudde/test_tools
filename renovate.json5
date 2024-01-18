@@ -43,9 +43,8 @@
       fileMatch: [
         '(^|/)vendir-data\\.ytt\\.yaml$',
       ],
-      matchStringsStrategy: 'recursive',
       matchStrings: [
-        'name:\\s*["]?(?<depName>[^\'"\\s]+)["]?.*source:\\s*["]?(?<datasource>[^\'"\\s]+)["]?\\s+url:\\s*["]?(?<registryUrl>[^\'"\\s]+)["]?\\s+version:\\s*["]?(?<currentValue>[^\'"\\s]+)["]?',
+        'name:\\s*["]?(?<depName>[^\'"\\s]+)["]?\\s+.*\\s+source:\\s*["]?(?<datasource>[^\'"\\s]+)["]?\\s+url:\\s*["]?(?<registryUrl>[^\'"\\s]+)["]?\\s+version:\\s*["]?(?<currentValue>[^\'"\\s]+)["]?',
       ],
     },
   ],
