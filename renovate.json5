@@ -14,6 +14,7 @@
     'renovate[bot]@users.noreply.github.com',
     'github-actions[bot]@users.noreply.github.com',
   ],
+  "dependencyDashboardApproval": true,
   packageRules: [
     {
       matchUpdateTypes: [
