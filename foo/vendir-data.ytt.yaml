@@ -7,7 +7,7 @@ application:
       kind: helm
       source: helm
       url: https://helm-charts.rm3l.org
-      version: 0.0.2
+      version: 0.13.0
     - name: gitea
       kind: helm
       source: helm
