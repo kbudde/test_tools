@@ -12,4 +12,4 @@ application:
       kind: helm
       source: helm
       url: https://dl.gitea.com/charts/
-      version: 10.1.4
+      version: 10.2.0
