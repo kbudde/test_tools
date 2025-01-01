@@ -47,36 +47,36 @@
         '#!\\s+renovate:\\s+datasource=(?<datasource>\\S+)\\s+depName=(?<depName>\\S+)\\s+[a-z0-9]+:\\s+[\'"]?(?<currentValue>[^\'"\\s]+)[\'"]?',
       ],
     },
-    // {
-    //   customType: 'regex',
-    //   fileMatch: [
-    //     '(^|/)vendir-data\\.ytt\\.yaml$',
-    //   ],
-    //   matchStrings: [
-    //     // name: argocd
-    //     // kind: ytt
-    //     // repo: git
-    //     // url: https://github.com/argoproj/argo-cd
-    //     // version: v2.13.2
-    //     'repo:\\s+git\\s+url:\\s+[\'"]?(?<depName>[^\'"\\s]+)[\'"]?\\s+version:\\s+[\'"]?(?<currentValue>[^\'"\\s]+)[\'"]?',
-    //   ],
-    //   "datasourceTemplate": 'git-tags',
-    // },
-    // {
-    //   customType: 'regex',
-    //   fileMatch: [
-    //     '(^|/)vendir-data\\.ytt\\.yaml$',
-    //   ],
-    //   matchStrings: [
-    //     //- name: cert-manager
-    //     //  kind: helm
-    //     //  repo: helmChart
-    //     //  url: https://charts.jetstack.io
-    //     //  version: v1.16.2
-    //     'name:\\s+(?<depName>[^\'"\\s]+)\\s+kind:\\s+([^\'"\\s]+)\\s+repo:\\s+helmChart\\s+url:\\s+[\'"]?(?<registryUrl>[^\'"\\s]+)[\'"]?\\s+version:\\s+(?<currentValue>[^\'"\\s]+)[\'"]?',
-    //   ],
-    //   "datasourceTemplate": 'helm',
-    // },
+    {
+      customType: 'regex',
+      fileMatch: [
+        '(^|/)vendir-data\\.ytt\\.yaml$',
+      ],
+      matchStrings: [
+        // name: argocd
+        // kind: ytt
+        // repo: git
+        // url: https://github.com/argoproj/argo-cd
+        // version: v2.13.2
+        'repo:\\s+git\\s+url:\\s+[\'"]?(?<depName>[^\'"\\s]+)[\'"]?\\s+version:\\s+[\'"]?(?<currentValue>[^\'"\\s]+)[\'"]?',
+      ],
+      "datasourceTemplate": 'git-tags',
+    },
+    {
+      customType: 'regex',
+      fileMatch: [
+        '(^|/)vendir-data\\.ytt\\.yaml$',
+      ],
+      matchStrings: [
+        //- name: cert-manager
+        //  kind: helm
+        //  repo: helmChart
+        //  url: https://charts.jetstack.io
+        //  version: v1.16.2
+        'name:\\s+(?<depName>[^\'"\\s]+)\\s+kind:\\s+([^\'"\\s]+)\\s+repo:\\s+helmChart\\s+url:\\s+[\'"]?(?<registryUrl>[^\'"\\s]+)[\'"]?\\s+version:\\s+(?<currentValue>[^\'"\\s]+)[\'"]?',
+      ],
+      "datasourceTemplate": 'helm',
+    },
     {
       customType: 'regex',
       fileMatch: [
