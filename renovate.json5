@@ -47,36 +47,36 @@
         '#!\\s+renovate:\\s+datasource=(?<datasource>\\S+)\\s+depName=(?<depName>\\S+)\\s+[a-z0-9]+:\\s+[\'"]?(?<currentValue>[^\'"\\s]+)[\'"]?',
       ],
     },
-    {
-      customType: 'regex',
-      fileMatch: [
-        '(^|/)vendir-data\\.ytt\\.yaml$',
-      ],
-      matchStrings: [
-        // name: argocd
-        // kind: ytt
-        // repo: git
-        // url: https://github.com/argoproj/argo-cd
-        // version: v2.13.2
-        'repo:\\s+git\\s+url:\\s+[\'"]?(?<depName>[^\'"\\s]+)[\'"]?\\s+version:\\s+[\'"]?(?<currentValue>[^\'"\\s]+)[\'"]?',
-      ],
-      "datasourceTemplate": 'git-tags',
-    },
-    {
-      customType: 'regex',
-      fileMatch: [
-        '(^|/)vendir-data\\.ytt\\.yaml$',
-      ],
-      matchStrings: [
-        //- name: cert-manager
-        //  kind: helm
-        //  repo: helmChart
-        //  url: https://charts.jetstack.io
-        //  version: v1.16.2
-        'name:\\s+(?<depName>[^\'"\\s]+)\\s+kind:\\s+([^\'"\\s]+)\\s+repo:\\s+helmChart\\s+url:\\s+[\'"]?(?<registryUrl>[^\'"\\s]+)[\'"]?\\s+version:\\s+(?<currentValue>[^\'"\\s]+)[\'"]?',
-      ],
-      "datasourceTemplate": 'helm',
-    },
+    // {
+    //   customType: 'regex',
+    //   fileMatch: [
+    //     '(^|/)vendir-data\\.ytt\\.yaml$',
+    //   ],
+    //   matchStrings: [
+    //     // name: argocd
+    //     // kind: ytt
+    //     // repo: git
+    //     // url: https://github.com/argoproj/argo-cd
+    //     // version: v2.13.2
+    //     'repo:\\s+git\\s+url:\\s+[\'"]?(?<depName>[^\'"\\s]+)[\'"]?\\s+version:\\s+[\'"]?(?<currentValue>[^\'"\\s]+)[\'"]?',
+    //   ],
+    //   "datasourceTemplate": 'git-tags',
+    // },
+    // {
+    //   customType: 'regex',
+    //   fileMatch: [
+    //     '(^|/)vendir-data\\.ytt\\.yaml$',
+    //   ],
+    //   matchStrings: [
+    //     //- name: cert-manager
+    //     //  kind: helm
+    //     //  repo: helmChart
+    //     //  url: https://charts.jetstack.io
+    //     //  version: v1.16.2
+    //     'name:\\s+(?<depName>[^\'"\\s]+)\\s+kind:\\s+([^\'"\\s]+)\\s+repo:\\s+helmChart\\s+url:\\s+[\'"]?(?<registryUrl>[^\'"\\s]+)[\'"]?\\s+version:\\s+(?<currentValue>[^\'"\\s]+)[\'"]?',
+    //   ],
+    //   "datasourceTemplate": 'helm',
+    // },
     {
       customType: 'regex',
       fileMatch: [
@@ -93,22 +93,22 @@
       depNameTemplate: '{{{name}}}',
       packageNameTemplate: '{{{namespace}}}/{{{name}}}',
     },
-    {
-      customType: 'regex',
-      fileMatch: [
-        '(^|/)vendir-data\\.ytt\\.yaml$',
-      ],
-      matchStrings: [
-        // #! renovate: datasource=git-tags
-        // url: https://github.com/argoproj/argo-cd
-        // version: v2.6.6
-        '#!\\s+renovate:\\s+datasource=(?<datasource>git-tags)\\s+url:\\s+[\'"]?(?<depName>[^\'"\\s]+)[\'"]?\\s+version:\\s+[\'"]?(?<currentValue>[^\'"\\s]+)[\'"]?',
-        // #! renovate: datasource=helm
-        // name: apisix
-        // url: https://charts.apiseven.com
-        // version: "1.3.1"
-        '#!\\s+renovate:\\s+datasource=(?<datasource>helm)\\s+name:\\s+[\'"]?(?<depName>[^\'"\\s]+)[\'"]?\\s+url:\\s+[\'"]?(?<registryUrl>[^\'"\\s]+)[\'"]?\\s+version:\\s+[\'"]?(?<currentValue>[^\'"\\s]+)[\'"]?',
-      ],
-    },
+    // {
+    //   customType: 'regex',
+    //   fileMatch: [
+    //     '(^|/)vendir-data\\.ytt\\.yaml$',
+    //   ],
+    //   matchStrings: [
+    //     // #! renovate: datasource=git-tags
+    //     // url: https://github.com/argoproj/argo-cd
+    //     // version: v2.6.6
+    //     '#!\\s+renovate:\\s+datasource=(?<datasource>git-tags)\\s+url:\\s+[\'"]?(?<depName>[^\'"\\s]+)[\'"]?\\s+version:\\s+[\'"]?(?<currentValue>[^\'"\\s]+)[\'"]?',
+    //     // #! renovate: datasource=helm
+    //     // name: apisix
+    //     // url: https://charts.apiseven.com
+    //     // version: "1.3.1"
+    //     '#!\\s+renovate:\\s+datasource=(?<datasource>helm)\\s+name:\\s+[\'"]?(?<depName>[^\'"\\s]+)[\'"]?\\s+url:\\s+[\'"]?(?<registryUrl>[^\'"\\s]+)[\'"]?\\s+version:\\s+[\'"]?(?<currentValue>[^\'"\\s]+)[\'"]?',
+    //   ],
+    // },
   ],
 }
